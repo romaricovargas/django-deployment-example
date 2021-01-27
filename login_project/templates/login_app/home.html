@@ -1,0 +1,16 @@
+{% extends "login_app/navbar.html" %}
+{% block body_block %}
+
+<div class="container">
+  {% if not user.is_authenticated %}
+    <h5>You are not logged in. Please log in.</h5>
+  {% else %}
+    {% if username %}
+      <h5>You're now logged in {{ username }}</h5>
+    {% endif %}
+  {% endif %}
+  <h1>Welcome to my Website :)</h1>
+
+</div>
+
+{% endblock %}
